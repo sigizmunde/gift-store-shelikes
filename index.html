@@ -16,7 +16,9 @@
   </head>
   <body>
     <header class="header">
-      <div class="logo">logo</div>
+      <svg class="logo">
+        <use href="./img/icons.svg#icon-logo"></use>
+      </svg>
       <nav class="navmenu">
         <ul class="navmenu__list">
           <li class="navmenu__item">
@@ -35,10 +37,12 @@
       </nav>
       <button type="button" class="gift-finder__btn">Gift finder</button>
     </header>
-    <section class="hero__section section">
+    <section class="section section--gray hero__section">
       <div class="container">
         <div class="hero__content">
-          <h1 class="hero__header">Find a gift for your wife or girlfriend</h1>
+          <h1 class="section__heading hero__heading">
+            Find a gift for your wife or girlfriend
+          </h1>
           <p class="hero__text">
             Struggling to find a gift for your wife or girlfriend? No problem!
           </p>
@@ -49,13 +53,13 @@
         <div class="hero__image-wrapper"></div>
       </div>
     </section>
-    <section class="about__section section">
-      <div class="container">
+    <section class="section section--gray about__section">
+      <div class="container container--full-width">
         <div class="about__image-wrapper">
           <img class="about__image" alt="A gift card telling Thanks!" />
         </div>
         <div class="about__content">
-          <h2 class="about__header">How we work</h2>
+          <h2 class="section__heading section__heading--left">How we work</h2>
           <p class="about__text">
             We’ve actually already asked hundreds of women what they want, and
             made a database with the results. All you have to do is take our
@@ -66,16 +70,34 @@
         </div>
       </div>
     </section>
-    <section class="occasions__section section">
+    <section class="section occasions__section">
       <div class="container">
-        <h2 class="occasions__header">Gifts for all Occasions</h2>
+        <h2 class="section__heading">Gifts for all Occasions</h2>
         <p class="occasions__tagline">
           “Try our web app to find the best gifts for all occasions”
         </p>
         <ul class="occasions__list">
           <li class="occasion">
-            <a href="#" class="occasion__link"
-              ><img class="occasion__img" />
+            <a href="#" class="occasion__link">
+              <picture class="occasion__img">
+                <source
+                  srcset="
+                    ./img/birthday270x150.jpg    1x,
+                    ./img/birthday270x150@2x.jpg 2x
+                  "
+                  media="(max-width: 767px)"
+                />
+
+                <source
+                  srcset="
+                    ./img/birthday270x270.jpg    1x,
+                    ./img/birthday270x270@2x.jpg 2x
+                  "
+                  media="(min-width: 768px)"
+                />
+
+                <img src="./img/birthday270x150.jpg" alt="birthday gifts" />
+              </picture>
               <div class="occasion__wrapper">
                 <p class="occasion__name">Birthday</p>
                 <!-- may be made as ::after -->
@@ -84,8 +106,29 @@
             >
           </li>
           <li class="occasion">
-            <a href="#" class="occasion__link"
-              ><img class="occasion__img" />
+            <a href="#" class="occasion__link">
+              <picture class="occasion__img">
+                <source
+                  srcset="
+                    ./img/anniversary270x150.jpg    1x,
+                    ./img/anniversary270x150@2x.jpg 2x
+                  "
+                  media="(max-width: 767px)"
+                />
+
+                <source
+                  srcset="
+                    ./img/anniversary270x270.jpg    1x,
+                    ./img/anniversary270x270@2x.jpg 2x
+                  "
+                  media="(min-width: 768px)"
+                />
+
+                <img
+                  src="./img/anniversary270x150.jpg"
+                  alt="anniversary gifts"
+                />
+              </picture>
               <div class="occasion__wrapper">
                 <p class="occasion__name">Anniversary</p>
                 <!-- may be made as ::after -->
@@ -94,8 +137,29 @@
             >
           </li>
           <li class="occasion">
-            <a href="#" class="occasion__link"
-              ><img class="occasion__img" />
+            <a href="#" class="occasion__link">
+              <picture class="occasion__img">
+                <source
+                  srcset="
+                    ./img/valentine270x150.jpg    1x,
+                    ./img/valentine270x150@2x.jpg 2x
+                  "
+                  media="(max-width: 767px)"
+                />
+
+                <source
+                  srcset="
+                    ./img/valentine270x270.jpg    1x,
+                    ./img/valentine270x270@2x.jpg 2x
+                  "
+                  media="(min-width: 768px)"
+                />
+
+                <img
+                  src="./img/valentine270x150.jpg"
+                  alt="valentine's day gifts"
+                />
+              </picture>
               <div class="occasion__wrapper">
                 <p class="occasion__name">Valentine's Day</p>
                 <!-- may be made as ::after -->
@@ -104,8 +168,26 @@
             >
           </li>
           <li class="occasion">
-            <a href="#" class="occasion__link"
-              ><img class="occasion__img" />
+            <a href="#" class="occasion__link">
+              <picture class="occasion__img">
+                <source
+                  srcset="
+                    ./img/christmas270x150.jpg    1x,
+                    ./img/christmas270x150@2x.jpg 2x
+                  "
+                  media="(max-width: 767px)"
+                />
+
+                <source
+                  srcset="
+                    ./img/christmas270x270.jpg    1x,
+                    ./img/christmas270x270@2x.jpg 2x
+                  "
+                  media="(min-width: 768px)"
+                />
+
+                <img src="./img/christmas270x150.jpg" alt="christmas gifts" />
+              </picture>
               <div class="occasion__wrapper">
                 <p class="occasion__name">Christmas</p>
                 <!-- may be made as ::after -->
@@ -116,21 +198,25 @@
         </ul>
       </div>
     </section>
-    <section class="call__section section">
+    <section class="section section--gray call__section">
       <div class="container">
-        <div class="call__text-wrapper">
-          <h2 class="call__header">Ready to get started?</h2>
-          <p class="call__text">Sign up or contact us</p>
+        <div class="call__wrapper">
+          <h2 class="section__heading section__heading--left">
+            <span class="strong-text">Ready to get started?</span> <br />
+            Sign up or contact us
+          </h2>
+          <div class="buttons-block">
+            <button class="call__button call__button--accented">
+              Find gift now
+            </button>
+            <button class="call__button">How it works</button>
+          </div>
         </div>
       </div>
-      <div class="buttons-block">
-        <button class="button button--accented">Find gift now</button>
-        <button class="button">How it works</button>
-      </div>
     </section>
-    <section class="blog__section section">
+    <section class="section blog__section">
       <div class="container">
-        <h2 class="blog__header">Gifts for all Occasions</h2>
+        <h2 class="section__heading">Gifts for all Occasions</h2>
         <p class="blog__tagline">
           “Try our web app to find the best gifts for all occasions”
         </p>
@@ -170,45 +256,53 @@
     </section>
     <footer class="footer">
       <ul class="footer__menu">
-        <li class="footer__link">Home</li>
-        <li class="footer__link">About</li>
-        <li class="footer__link footer__link--centered logo">logo</li>
-        <li class="footer__link">Service</li>
-        <li class="footer__link">Blog</li>
+        <li class="footer__item"><a href="#" class="footer__link">Home</a></li>
+        <li class="footer__item"><a href="#" class="footer__link">About</a></li>
+        <li class="footer__item footer__item--centered">
+          <a href="#" class="footer__link">
+            <svg class="logo logo--colored">
+              <use href="./img/icons.svg#icon-logo"></use>
+            </svg>
+          </a>
+        </li>
+        <li class="footer__item">
+          <a href="#" class="footer__link">Service</a>
+        </li>
+        <li class="footer__item"><a href="#" class="footer__link">Blog</a></li>
       </ul>
       <ul class="social__menu">
         <li class="social__item">
-          <a class="social__link"
-            ><svg>
-              <use></use>
+          <a class="social__link" href="#">
+            <svg class="social__icon">
+              <use href="./img/icons.svg#icon-circle_facebook"></use>
             </svg>
           </a>
         </li>
         <li class="social__item">
-          <a class="social__link"
-            ><svg>
-              <use></use>
+          <a class="social__link" href="#">
+            <svg class="social__icon">
+              <use href="./img/icons.svg#icon-circle_twitter"></use>
             </svg>
           </a>
         </li>
         <li class="social__item">
-          <a class="social__link"
-            ><svg>
-              <use></use>
+          <a class="social__link" href="#">
+            <svg class="social__icon">
+              <use href="./img/icons.svg#icon-circle_instagram"></use>
             </svg>
           </a>
         </li>
         <li class="social__item">
-          <a class="social__link"
-            ><svg>
-              <use></use>
+          <a class="social__link" href="#">
+            <svg class="social__icon">
+              <use href="./img/icons.svg#icon-circle_youtube"></use>
             </svg>
           </a>
         </li>
         <li class="social__item">
-          <a class="social__link"
-            ><svg>
-              <use></use>
+          <a class="social__link" href="#">
+            <svg class="social__icon">
+              <use href="./img/icons.svg#icon-circle_pinterest"></use>
             </svg>
           </a>
         </li>

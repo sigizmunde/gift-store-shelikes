@@ -17,12 +17,48 @@
 }
 @mixin flex_grid_item($cols, $gap, $v_gap: null) {
   align-self: stretch;
-  
+
   width: calc((100% - (#{$gap} * #{$cols})) / #{$cols});
   margin: calc(#{$gap} / 2);
 
   @if $v_gap {
     margin-top: calc(#{$v_gap} / 2);
     margin-bottom: calc(#{$v_gap} / 2);
+  }
+}
+
+@mixin button($type: normal) {
+  @include flex_center();
+  padding: 13px 16px;
+  font-family: inherit;
+  font-style: normal;
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.17;
+
+  cursor: pointer;
+
+  border-radius: 5px;
+  @if $type == normal {
+    color: var(--accent-color);
+    background-color: transparent;
+    border: solid 1px var(--accent-color);
+  } @else if $type == inverted {
+    color: var(--inverted-text-color);
+    background-color: var(--accent-color);
+    border: solid 1px var(--accent-color);
+  } @else if $type == dark {
+    color: var(--main-text-color);
+    background-color: transparent;
+    border: solid 1px var(--inverted-bg-color);
+  } @else if $type == dark-inverted {
+    color: var(--inverted-text-color);
+    background-color: var(--inverted-bg-color);
+    border: solid 1px var(--inverted-bg-color);
+  } @else {
+    color: var(--accent-color);
+    background-color: transparent;
+    border: solid 1px var(--accent-color);
   }
 }

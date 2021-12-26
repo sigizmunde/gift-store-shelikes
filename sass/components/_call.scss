@@ -1,0 +1,32 @@
+.call__section {
+  background-color: var(--accent-color);
+}
+
+.call__section .container {
+  @media screen and (max-width: 480px) {
+    padding-left: 52px;
+    padding-right: 52px;
+  }
+}
+
+.buttons-block {
+  @include flex_grid(10px, 16px);
+}
+
+.call__button {
+  @include flex_grid_item(2, 10px, 16px);
+
+  @include button(dark);
+
+  &:active {
+    @include button(dark-inverted);
+  }
+
+  &--accented {
+    @include button(dark-inverted);
+
+    &:active {
+      @include button(dark);
+    }
+  }
+}

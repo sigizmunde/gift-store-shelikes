@@ -1,27 +1,20 @@
 .logo {
-  display: inline-block;
-  color: var(--accent-color);
-  text-decoration: none;
-  font-family: "Raleway", sans-serif;
-  font-weight: 700;
-  font-size: 26px;
-  letter-spacing: 0.03em;
+  display: block;
+  width: 41px;
+  height: 39px;
 
-  &--expanded {
-    padding-top: 24px;
-    padding-bottom: 24px;
-    margin-right: 93px;
+  fill: currentColor;
+
+  &--colored,
+  &:hover,
+  &:focus,
+  &:active {
+    fill: var(--accent-color);
   }
 
-  &--margin20 {
-    margin-bottom: 20px;
-  }
-}
-
-.logo__text {
-  color: var(--secondary-text-color);
-
-  &--inverted {
-    color: var(--inverted-text-color);
+  &--colored:hover,
+  &--colored:focus,
+  &--colored:active {
+    fill: currentColor;
   }
 }
