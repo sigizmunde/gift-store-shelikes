@@ -18,15 +18,7 @@
 
   @include button(dark);
 
-  &:active {
-    @include button(dark-inverted);
-  }
-
   &--accented {
     @include button(dark-inverted);
-
-    &:active {
-      @include button(dark);
-    }
   }
 }

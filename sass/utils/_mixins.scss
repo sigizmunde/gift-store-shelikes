@@ -61,4 +61,28 @@
     background-color: transparent;
     border: solid 1px var(--accent-color);
   }
+
+  &:active,
+  &:focus,
+  &:hover {
+    @if $type == normal {
+      color: var(--main-text-color);
+      background-color: transparent;
+      border: solid 1px var(--inverted-bg-color);
+    } @else if $type == inverted {
+      color: var(--accent-color);
+      background-color: transparent;
+      border: solid 1px var(--accent-color);
+    } @else if $type == dark {
+      color: var(--inverted-text-color);
+      border: solid 1px var(--inverted-text-color);
+    } @else if $type == dark-inverted {
+      color: var(--accent-color);
+      border: solid 1px var(--inverted-bg-color);
+    } @else {
+      color: var(--inverted-text-color);
+      background-color: var(--accent-color);
+      border: solid 1px var(--accent-color);
+    }
+  }
 }
