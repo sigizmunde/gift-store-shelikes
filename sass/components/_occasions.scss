@@ -1,0 +1,59 @@
+.occasions__tagline {
+  width: 270px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 50px;
+  font-size: 18px;
+  line-height: 1.36;
+  text-align: center;
+}
+
+.occasions__list {
+  @extend %list;
+}
+
+.occasion {
+  width: 270px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.occasion:not(:last-child) {
+  margin-bottom: 50px;
+}
+
+.occasion__img {
+  display: block;
+}
+
+.occasion__link {
+  display: block;
+
+  background-color: var(--menu-bg-color);
+  @extend %link_no_accent;
+
+  &:active,
+  &:focus,
+  &:hover {
+    background-color: var(--main-bg-color);
+    box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.05);
+  }
+}
+
+.occasion__wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 166px;
+  padding: 24px;
+}
+
+.occasion__name {
+  font-size: 20px;
+  line-height: 1.17;
+}
+
+.occasion__pointer-text {
+  margin-top: auto;
+  font-size: 14px;
+  line-height: calc (19 / 14);
+}

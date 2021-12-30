@@ -2,9 +2,13 @@
   list-style: none;
 }
 
-%link {
+%link_no_accent {
   text-decoration: none;
   color: inherit;
+}
+
+%link {
+  @extend %link_no_accent;
 
   &:hover,
   &:focus,

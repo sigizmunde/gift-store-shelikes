@@ -248,17 +248,35 @@
     </section>
     <section class="section blog__section">
       <div class="container">
-        <h2 class="section__heading">Gifts for all Occasions</h2>
+        <h2 class="section__heading">Our Best Blogs Ever</h2>
         <p class="blog__tagline">
-          “Try our web app to find the best gifts for all occasions”
+          “Try our blog to find the best tips and tricks to select your gift”
         </p>
         <div class="blog__highlight">
-          <img class="blog__title-image" alt="Another young merry couple" />
-          <p class="blog__author blog__author--highlighted">John Doe</p>
-          <h3 class="blog__title blog__title--highlighted">
-            The best way to wish your wife
-          </h3>
-          <a href="#" class="blog__link blog__link--highlighted">Read More</a>
+          <picture class="blog__title-image"
+            ><source
+              srcset="./img/blog390x200.jpg 1x, ./img/blog390x200@2x.jpg 2x"
+              media="(max-width: 767px)"
+            />
+
+            <source
+              srcset="./img/blog400x370.jpg 1x, ./img/blog400x370@2x.jpg 2x"
+              media="(min-width: 768px)"
+            />
+
+            <img
+              class="blog__title-image"
+              src="./img/blog390x200.jpg"
+              alt="Another young merry couple"
+            />
+          </picture>
+          <div class="blog__wrapper">
+            <p class="blog__author blog__author--highlighted">John Doe</p>
+            <h3 class="blog__title blog__title--highlighted">
+              The best way to wish your wife
+            </h3>
+            <a href="#" class="blog__link blog__link--highlighted">Read More</a>
+          </div>
         </div>
         <ul class="blog__list">
           <li class="blog__item">
@@ -266,9 +284,8 @@
               Database to find the gifts for your girlfriend
             </h3>
             <p class="blog__lead-text">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque hic
-              illo amet laudantium dignissimos, quidem, eum corrupti ullam
-              maxime unde nam eius autem eos dolore...
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore...
             </p>
             <a href="#" class="blog__link">Read More</a>
           </li>
@@ -277,9 +294,8 @@
               How Artificial Intelligence read your mind to find the best gift
             </h3>
             <p class="blog__lead-text">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque hic
-              illo amet laudantium dignissimos, quidem, eum corrupti ullam
-              maxime unde nam eius autem eos dolore...
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore...
             </p>
             <a href="#" class="blog__link">Read More</a>
           </li>
