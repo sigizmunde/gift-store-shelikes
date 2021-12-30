@@ -15,6 +15,6 @@
   &--colored:hover,
   &--colored:focus,
   &--colored:active {
-    fill: currentColor;
+    fill: var(--main-text-color);
   }
 }
