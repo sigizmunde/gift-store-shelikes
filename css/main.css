@@ -48,16 +48,16 @@ ul {
   --transition-params: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.occasions__list, .blog__list, .footer__menu, .social__menu {
+.navmenu__list, .occasions__list, .blog__list, .footer__menu, .social__menu {
   list-style: none;
 }
 
-.blog__link, .footer__link, .occasion__link {
+.navmenu__link, .blog__link, .footer__link, .occasion__link {
   text-decoration: none;
   color: inherit;
 }
 
-.blog__link:hover, .footer__link:hover, .blog__link:focus, .footer__link:focus, .blog__link:active, .footer__link:active {
+.navmenu__link:hover, .blog__link:hover, .footer__link:hover, .navmenu__link:focus, .blog__link:focus, .footer__link:focus, .navmenu__link:active, .blog__link:active, .footer__link:active {
   color: var(--accent-color);
 }
 
@@ -75,26 +75,26 @@ ul {
   margin: -1px;
 }
 
-.container, .header__container {
+.container {
   margin: 0 auto;
   padding: 0 15px;
 }
 
 @media screen and (max-width: 767px) {
-  .container, .header__container {
+  .container {
     min-width: 320px;
     max-width: 480px;
   }
 }
 
 @media screen and (min-width: 768px) {
-  .container, .header__container {
+  .container {
     width: 768px;
   }
 }
 
 @media screen and (min-width: 1440px) {
-  .container, .header__container {
+  .container {
     width: 1200px;
   }
 }
@@ -152,6 +152,18 @@ ul {
   fill: currentColor;
 }
 
+@media screen and (min-width: 768px) {
+  .logo {
+    width: 105px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .logo {
+    width: 150px;
+  }
+}
+
 .logo--colored, .logo:hover, .logo:focus, .logo:active {
   fill: var(--accent-color);
 }
@@ -161,169 +173,125 @@ ul {
 }
 
 .header {
-  border-bottom: 1px solid #ececec;
-}
-
-.header__container {
+  padding: 31px 33px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: nowrap;
-      flex-wrap: nowrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  max-width: 1440px;
+  margin: 0 auto;
 }
 
-/* navigation menu */
-.site-nav,
-.contacts {
+@media screen and (min-width: 1440px) {
+  .header {
+    padding: 36px 34px;
+  }
+}
+
+.navmenu {
   display: none;
 }
 
 @media screen and (min-width: 768px) {
-  .site-nav,
-  .contacts {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
+  .navmenu {
+    display: block;
   }
 }
 
-.site-nav {
-  -ms-flex-wrap: nowrap;
-      flex-wrap: nowrap;
+.navmenu__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
-.site-nav__wrapper {
-  display: none;
+.navmenu__item:not(:last-child) {
+  margin-right: 31px;
 }
 
-@media screen and (min-width: 768px) {
-  .site-nav__wrapper {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    margin-right: auto;
+@media screen and (min-width: 1440px) {
+  .navmenu__item:not(:last-child) {
+    margin-right: 36px;
   }
 }
 
-.contacts {
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: left;
-      -ms-flex-pack: left;
-          justify-content: left;
-  margin-right: -30px;
+.navmenu__link {
+  font-size: 16px;
+  line-height: 1.17;
 }
 
-@media screen and (min-width: 1200px) {
-  .contacts {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
+@media screen and (min-width: 1440px) {
+  .navmenu__link {
+    font-size: 18px;
+    line-height: 1.18;
   }
 }
 
-.site-nav__item {
-  display: block;
-  margin-right: 50px;
-}
-
-.site-nav__item:last-child {
-  margin-right: 0;
-}
-
-.contacts__item {
-  display: block;
-  margin-right: 30px;
-}
-
-@media screen and (max-width: 1199px) {
-  .contacts__item:not(:last-child) {
-    margin-bottom: 10px;
-  }
-  .contacts__item:not(:last-child) .contacts__link {
-    padding-top: 16px;
-    padding-bottom: 0;
-  }
-  .contacts__item:last-child .contacts__link {
-    padding-top: 0;
-    padding-bottom: 16px;
-  }
-}
-
-.contacts__link,
-.site-nav__link {
-  display: block;
-  padding-top: 30px;
-  padding-bottom: 30px;
-  color: var(--secondary-text-color);
-  text-decoration: none;
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 1.14;
-  letter-spacing: 0.02em;
-  -webkit-transition: color var(--transition-params);
-  transition: color var(--transition-params);
-}
-
-.contacts__link:hover, .contacts__link:focus,
-.site-nav__link:hover,
-.site-nav__link:focus {
+.gift-finder__btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 13px 16px;
+  font-family: inherit;
+  font-style: normal;
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.17;
+  cursor: pointer;
+  border-radius: 5px;
   color: var(--accent-color);
+  background-color: transparent;
+  border: solid 1px var(--accent-color);
+  width: 105px;
+  height: 55px;
 }
 
-@media screen and (min-width: 1200px) {
-  .contacts__link,
-  .site-nav__link {
-    font-size: 16px;
-  }
-}
-
-.site-nav__link {
-  position: relative;
-}
-
-.site-nav__link--current {
-  color: var(--accent-color);
-}
-
-.site-nav__link--current::after {
-  content: "";
-  position: absolute;
-  bottom: -2px;
-  left: 0;
-  width: 100%;
-  height: 4px;
-  background-color: var(--accent-color);
-  border-radius: 2px;
-}
-
-.contacts__link {
+.gift-finder__btn:active, .gift-finder__btn:focus, .gift-finder__btn:hover {
   color: var(--main-text-color);
+  background-color: transparent;
+  border: solid 1px var(--inverted-bg-color);
 }
 
-@media screen and (max-width: 1199px) {
-  .contacts__link {
-    font-size: 12px;
-    line-height: 1.17;
+@media screen and (min-width: 1440px) {
+  .gift-finder__btn {
+    width: 150px;
+    height: 44px;
   }
 }
 
-.contacts__icon {
-  margin-right: 6px;
-  vertical-align: -3px;
-  fill: currentColor;
+.header__menu-btn {
+  width: 40px;
+  height: 40px;
+}
+
+@media screen and (min-width: 768px) {
+  .header__menu-btn {
+    display: none;
+  }
 }
 
 .hero__section {
+  position: relative;
   padding: 0;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+@media screen and (min-width: 768px) {
+  .hero__section {
+    height: 700px;
+  }
 }
 
 .hero__image-wrapper {
@@ -332,6 +300,59 @@ ul {
   height: 305px;
   overflow: hidden;
   background: var(--inverted-bg-color);
+}
+
+@media screen and (min-width: 768px) {
+  .hero__image-wrapper {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 5;
+    height: 700px;
+    width: calc(222px + 34.5vw);
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .hero__image-wrapper {
+    width: 720px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .hero__image-wrapper {
+    opacity: 0.5;
+  }
+}
+
+@media screen and (min-width: 850px) {
+  .hero__image-wrapper {
+    opacity: 0.6;
+  }
+}
+
+@media screen and (min-width: 950px) {
+  .hero__image-wrapper {
+    opacity: 0.7;
+  }
+}
+
+@media screen and (min-width: 1100px) {
+  .hero__image-wrapper {
+    opacity: 0.8;
+  }
+}
+
+@media screen and (min-width: 1250px) {
+  .hero__image-wrapper {
+    opacity: 0.9;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .hero__image-wrapper {
+    opacity: 1;
+  }
 }
 
 .hero__img {
@@ -345,11 +366,27 @@ ul {
           transform: translate(-50%, -50%);
 }
 
+@media screen and (min-width: 768px) {
+  .hero__img {
+    width: 720px;
+  }
+}
+
 .hero__content {
   padding-top: 75px;
   padding-right: 58px;
   padding-bottom: 75px;
   padding-left: 58px;
+}
+
+@media screen and (min-width: 768px) {
+  .hero__content {
+    height: 700px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10;
+  }
 }
 
 .hero__heading {
@@ -461,6 +498,8 @@ ul {
 
 .about__section {
   padding: 0;
+  max-width: 1440px;
+  margin: 0 auto;
 }
 
 .about__image-wrapper {
@@ -604,7 +643,7 @@ ul {
 }
 
 @media screen and (max-width: 480px) {
-  .call__section .container, .call__section .header__container {
+  .call__section .container {
     padding-left: 52px;
     padding-right: 52px;
   }

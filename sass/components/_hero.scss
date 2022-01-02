@@ -1,5 +1,12 @@
 .hero__section {
+  position: relative;
   padding: 0;
+  max-width: 1440px;
+  margin: 0 auto;
+
+  @media screen and (min-width: 768px) {
+    height: 700px;
+  }
 }
 
 .hero__image-wrapper {
@@ -9,6 +16,50 @@
   overflow: hidden;
 
   background: var(--inverted-bg-color);
+
+  @media screen and (min-width: 768px) {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 5;
+    height: 700px;
+    width: calc(222px + 34.5vw);
+    // 768 vw=7.7,  1440 vw=14.4
+
+    // x + 7.7y = 488;
+    // x + 14.4y = 720;
+
+    // y = (488 - x) / 7.7;
+    // x + 14.4 * (488 - x) / 7.7 = 720;
+
+    // x - 1.87x + 913 = 720;
+    // x = 222;
+
+    // y = 34.5;
+  }
+
+  @media screen and (min-width: 1440px) {
+    width: 720px;
+  }
+
+  @media screen and (min-width: 768px) {
+    opacity: 0.5;
+  }
+  @media screen and (min-width: 850px) {
+    opacity: 0.6;
+  }
+  @media screen and (min-width: 950px) {
+    opacity: 0.7;
+  }
+  @media screen and (min-width: 1100px) {
+    opacity: 0.8;
+  }
+  @media screen and (min-width: 1250px) {
+    opacity: 0.9;
+  }
+  @media screen and (min-width: 1440px) {
+    opacity: 1;
+  }
 }
 
 .hero__img {
@@ -19,6 +70,10 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+
+  @media screen and (min-width: 768px) {
+    width: 720px;
+  }
 }
 
 .hero__content {
@@ -26,6 +81,14 @@
   padding-right: 58px;
   padding-bottom: 75px;
   padding-left: 58px;
+
+  @media screen and (min-width: 768px) {
+    height: 700px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10;
+  }
 }
 
 .hero__heading {
