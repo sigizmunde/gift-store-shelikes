@@ -72,7 +72,8 @@
   transform: translate(-50%, -50%);
 
   @media screen and (min-width: 768px) {
-    width: 720px;
+    width: 719px;
+    height: 700px;
   }
 }
 
@@ -97,6 +98,10 @@
   line-height: calc(45 / 38);
   margin-bottom: 42px;
   letter-spacing: -0.03em;
+
+  @media screen and (min-width: 768px) {
+    text-align: left;
+  }
 }
 
 .hero__text {
