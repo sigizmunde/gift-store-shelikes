@@ -2,10 +2,33 @@
   background-color: var(--accent-color);
 }
 
-.call__section .container {
-  @media screen and (max-width: 480px) {
-    padding-left: 52px;
-    padding-right: 52px;
+.call__wrapper {
+  padding-left: 37px;
+  padding-right: 37px;
+
+  @media screen and (min-width: 768px) {
+    padding-left: 57px;
+    padding-right: 57px;
+  }
+
+  @media screen and (min-width: 960px) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+
+  @media screen and (min-width: 1440px) {
+    padding-left: 100px;
+    padding-right: 100px;
+  }
+}
+
+.call__heading {
+  @media screen and (min-width: 960px) {
+    margin-bottom: 0;
   }
 }
 
@@ -20,5 +43,13 @@
 
   &--accented {
     @include button(dark-inverted);
+  }
+
+  @media screen and (min-width: 960px) {
+    width: auto;
+  }
+
+  @media screen and (min-width: 1440px) {
+    width: 200px;
   }
 }
